@@ -32,6 +32,7 @@ public class TicketMineFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_ticketmine, null);
         lv_my_ticket = (ListView) view.findViewById(R.id.lv_my_ticket);
+        getMyTicket();
         return view;
     }
 
@@ -49,10 +50,7 @@ public class TicketMineFragment extends Fragment {
                 switch (msg.what) {
                     case 1:
                         LogUtils.i("我的礼券------->" + msg.obj);
-
                         String json = (String) msg.obj;
-
-
                         break;
                 }
             }
