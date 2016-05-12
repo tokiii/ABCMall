@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:paddingBottom="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/rl_wait_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_wait_pay"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="top|center"
+                android:layout_height="wrap_content"
+                android:contentDescription="待付款"
+                android:src="@mipmap/pay" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_wait_pay_count"
+                android:background="@drawable/circle_text"
+                android:layout_width="18dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="top|end"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/red"
+                android:text="12"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_wait_pay"
+                android:text="待付款"
+                android:layout_gravity="bottom|center"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/app_tv_color" />
+
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/rl_wait_deliver"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_wait_deliver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center|top"
+                android:contentDescription="待发货图标"
+                android:src="@mipmap/wait_send" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_wait_deliver_count"
+                android:background="@drawable/circle_text"
+                android:layout_width="18dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="top|end"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/red"
+                android:text="12"/>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:gravity="center"
+                android:layout_below="@id/iv_wait_deliver"
+                android:text="待发货"
+                android:textColor="@color/app_tv_color" />
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/rl_wait_receipt"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_wait_receipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="10dp"
+                android:contentDescription="待收货"
+                android:src="@mipmap/deliver" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_wait_receipt_count"
+                android:background="@drawable/circle_text"
+                android:layout_width="18dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="top|end"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/red"
+                android:text="12"/>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_wait_receipt"
+                android:text="待收货"
+                android:layout_gravity="bottom|center"
+                android:textColor="@color/app_tv_color" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/rl_receipted"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="bottom"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_gravity="top|center"
+                android:id="@+id/iv_receipted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="待收货"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/finished" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_receipted_count"
+                android:background="@drawable/circle_text"
+                android:layout_width="18dp"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="top|end"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/red"
+                android:text="12"/>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_receipted"
+                android:text="已收货"
+                android:layout_gravity="bottom|center"
+                android:textColor="@color/app_tv_color" />
+
+
+        </FrameLayout>
+
+
+
+
+
+
+        <FrameLayout
+            android:id="@+id/rl_all_refund_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_gravity="top|center"
+                android:id="@+id/iv_all_refund_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="待收货"
+                android:src="@mipmap/all" />
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_below="@id/iv_all_refund_orders"
+                android:text="所有退单"
+                android:textColor="@color/app_tv_color" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+
+</FrameLayout>

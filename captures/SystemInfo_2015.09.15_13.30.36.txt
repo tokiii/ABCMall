@@ -1,0 +1,33 @@
+Applications Memory Usage (kB):
+Uptime: 15826720 Realtime: 15826720
+
+** MEMINFO in pid 11198 [com.cbn.cbnmall] **
+                         Shared  Private     Heap     Heap     Heap
+                   Pss    Dirty    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------
+       Native     1518      824     1480     6732     6712       19
+       Dalvik     2011     6912     1668     4932     4412      520
+       Cursor        0        0        0                           
+       Ashmem        0        0        0                           
+    Other dev        4       24        0                           
+     .so mmap      632     2020      184                           
+    .jar mmap        0        0        0                           
+    .apk mmap      100        0        0                           
+    .ttf mmap      113        0        0                           
+    .dex mmap      812        0        0                           
+   Other mmap       70       24       68                           
+      Unknown      180       12      180                           
+        TOTAL     5440     9816     3580    11664    11124      539
+ 
+ Objects
+               Views:       17         ViewRootImpl:        1
+         AppContexts:        3           Activities:        1
+              Assets:        2        AssetManagers:        2
+       Local Binders:        8        Proxy Binders:       17
+    Death Recipients:        0
+     OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:        0
+  PAGECACHE_OVERFLOW:        0          MALLOC_SIZE:        0
+ 

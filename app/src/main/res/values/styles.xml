@@ -1,0 +1,111 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@mipmap/welcome</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <!-- 自定义loading dialog -->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <declare-styleable name="FlowLayout">
+        <attr name="horizontal_spacing" format="dimension" />
+        <attr name="vertical_spacing" format="dimension" />
+    </declare-styleable>
+
+
+    <style name="AnimBottom" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+
+
+    </style>
+    <style name="MyDialogStyleFromBottom" >
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:actionBarItemBackground">@color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- 公共标题样式 -->
+    <style name="text_base" parent="android:Theme.Light">
+        <item name="android:textColor">@color/common_txt</item>
+        <item name="android:textSize">@dimen/txt_fs</item>
+    </style>
+
+    <!-- list start listview的内容样式 浅灰色 -->
+    <style name="list_item_content" parent="text_base">
+        <item name="android:textColor">@color/common_txt</item>
+        <item name="android:textSize">@dimen/txt_fs</item>
+    </style>
+
+    <style name="dialog_yuanjiao" parent="@android:style/Theme.Dialog">
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:background">@drawable/dialog_yuanjiao</item><!--dialog背景样式-->
+        <item name="android:windowBackground">@color/transparent</item><!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+    </style>
+
+    <style name="App_start_theme" parent="Theme.AppCompat">
+        <item name="android:windowBackground">@mipmap/welcome</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+    <!--<style name="ActivityTheme" parent="Theme.AppCompat">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--<item name="android:activityOpenEnterAnimation">@anim/umeng_socialize_fade_in</item>-->
+        <!--<item name="android:activityCloseExitAnimation">@anim/umeng_socialize_fade_out</item>-->
+    <!--</style>-->
+
+
+    <!-- animation 样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_right_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_left_out</item>
+
+    </style>
+
+
+    <style name="Theme.AppCompat.TranslucentNoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@mipmap/welcome</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#EEEEEE"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="20px"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="88px"
+            android:textColor="#333333"
+            android:textSize="32px"
+            android:gravity="center"
+            android:text="优惠券编号"/>
+
+        <RelativeLayout
+            android:layout_marginLeft="10px"
+            android:layout_width="530px"
+            android:background="@drawable/zhijiaobiankuang"
+            android:layout_height="88px">
+            <EditText
+                android:id="@+id/et_card"
+                android:layout_marginLeft="10px"
+                android:layout_width="530px"
+                android:layout_height="87px"
+                android:background="@null"
+                android:textSize="28px"
+                android:textColor="#c5c5c5"
+                android:hint="请输入优惠券编号"
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="20px"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="152px"
+            android:layout_height="88px"
+            android:textColor="#333333"
+            android:textSize="32px"
+            android:gravity="center|end"
+            android:text="激活码"/>
+
+        <RelativeLayout
+            android:layout_marginLeft="10px"
+            android:layout_width="530px"
+            android:background="@drawable/zhijiaobiankuang"
+            android:layout_height="88px">
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_marginLeft="10px"
+                android:layout_width="530px"
+                android:layout_height="87px"
+                android:background="@null"
+                android:textSize="28px"
+                android:textColor="#c5c5c5"
+                android:hint="请输入激活码"
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_active"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="20dp"
+        android:layout_width="710px"
+        android:layout_height="88px"
+        android:text="点击激活"
+        android:textSize="32px"
+        android:textColor="#ffff"
+        android:background="#d02228"/>
+
+
+</LinearLayout>

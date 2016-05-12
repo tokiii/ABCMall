@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cbn.abcmall">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- 必选 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- 【必选】用以设置前台是否显示通知 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 可选 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    ;
+
+    <!-- 【必须】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 【可选】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+
+    <!--接收短信验证码权限-->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+    <!-- 信鸽End -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.cbn.abcmall.common.MyApplication"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56960ef667e58e6af3000981" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="c2309412f845698e347761146e904bac" />
+
+
+        <!--设计稿尺寸-->
+        <meta-data
+            android:name="design_width"
+            android:value="750"></meta-data>
+        <meta-data
+            android:name="design_height"
+            android:value="1334"></meta-data>
+        <!--设计稿end-->
+
+        <activity
+            android:name=".activites.WelcomeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activites.RegisterActivity" />
+        <activity android:name=".activites.LoginActivity" android:clearTaskOnLaunch="true"/>
+        <activity android:name=".activites.ProductDetailActivity" />
+        <activity
+            android:name=".activites.PropertyActivity"
+            android:theme="@style/MyDialogStyleFromBottom" />
+        <activity
+            android:name=".activites.CartConfirmActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activites.ChargeActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".activites.RefundActivity" />
+        <activity android:name=".activites.AddressActivity" />
+        <activity android:name=".activites.AllRefundActivity" />
+        <activity android:name=".activites.AllOrdersActivity" />
+        <activity android:name=".activites.SettingActivity" />
+        <activity android:name=".activites.AddressEditActivity" />
+        <activity android:name=".activites.AddressAddActivity" />
+        <activity android:name=".activites.LogisticActivity" />
+        <activity android:name=".activites.ShopActivity" />
+        <activity
+            android:name=".activites.RefundDetailActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".activites.CollectActivity" />
+        <activity android:name=".activites.SearchActivity" android:launchMode="singleTask"/>
+        <activity
+            android:name=".activites.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activites.PayActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".activites.OrderDetailActivity" />
+        <activity android:name=".activites.OrderFragmentActivity" />
+        <activity android:name=".activites.LoginNoPassActivity"/>
+        <activity android:name=".activites.CouponActivity"/>
+        <activity android:name=".activites.InviteActivity"/>
+        <activity android:name=".activites.TicketActivity"/>
+        <activity android:name=".activites.RebateActivity"/>
+        <activity android:name=".activites.InviteQrcodeActivity"/>
+
+
+
+
+
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" />
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 腾讯信鸽接入配置 -->
+        <!-- APP项目的其它配置... -->
+
+
+        <!-- 【必须】 信鸽receiver广播接收 -->
+        <receiver
+            android:name="com.tencent.android.tpush.XGPushReceiver"
+            android:process=":xg_service_v2">
+            <intent-filter android:priority="0x7fffffff">
+
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
+        <!-- 【注意】 如果被打开的activity是启动模式为SingleTop，SingleTask或SingleInstance，请根据通知的异常自查列表第8点处理 -->
+        <activity
+            android:name="com.tencent.android.tpush.XGPushActivity"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 若使用AndroidStudio，请设置android:name="android.intent.action" -->
+                <action android:name="android.intent.action" />
+            </intent-filter>
+        </activity>
+
+        <!-- 【必须】 信鸽service -->
+        <service
+            android:name="com.tencent.android.tpush.service.XGPushService"
+            android:exported="true"
+            android:persistent="true"
+            android:process=":xg_service_v2" />
+
+        <!-- 【必须】 通知service，此选项有助于提高抵达率 -->
+        <service
+            android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.cbn.cbnmall.PUSH_ACTION" />
+            </intent-filter>
+        </service>
+
+        <!-- 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_ID"
+            android:value="2100179423" />
+        <!-- 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_KEY"
+            android:value="AJ43Y6SG7F5U" />
+        <!-- 信鸽End -->
+
+
+        <!-- 自定义服务进程 -->
+        <service
+            android:name=".services.MyService"
+            android:enabled="true"></service>
+
+        <!--自定义广播接收器-->
+        <receiver
+            android:name=".broadcasts.NetReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+
+        <!--空Activity-->
+        <activity
+            android:name=".activites.EmptyActivity"
+            android:label="@string/title_activity_empty_activty"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+    </application>
+
+</manifest>

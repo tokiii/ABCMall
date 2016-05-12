@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/btn_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/left_white" />
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="标题"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/right"
+                android:layout_marginRight="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:gravity="end"
+                android:id="@+id/tv_name"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="收货人:" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="300dp"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_name"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/product_line"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:gravity="end"
+                android:id="@+id/tv_mobile"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="手机:" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="300dp"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_mobile"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/product_line"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:gravity="end"
+                android:id="@+id/tv_tel"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="座机:" />
+
+            <EditText
+                android:layout_toRightOf="@id/tv_tel"
+                android:id="@+id/et_tel"
+                android:layout_width="300dp"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/product_line"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:gravity="end"
+                android:id="@+id/tv_address"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="地区:" />
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="300dp"
+                android:background="@null"
+                android:focusable="false"
+                android:editable="false"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_address"
+                android:layout_centerVertical="true" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/product_line"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:gravity="end"
+                android:id="@+id/tv_address_detail"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="详细地址:" />
+
+            <EditText
+                android:id="@+id/et_address_detail"
+                android:layout_width="300dp"
+                android:background="@null"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_address_detail"
+                android:layout_centerVertical="true" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/product_line"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:gravity="end"
+                android:id="@+id/tv_default"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="是否默认:" />
+
+            <Spinner
+                android:layout_toRightOf="@id/tv_default"
+                android:id="@+id/sp_default"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"></Spinner>
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/product_line"/>
+
+        <LinearLayout
+
+            android:layout_marginTop="30dp"
+            android:id="@+id/ll_province"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.cbn.abcmall.wheel.WheelView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wv_province"/>
+
+            <com.cbn.abcmall.wheel.WheelView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wv_city"/>
+
+            <com.cbn.abcmall.wheel.WheelView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wv_area"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_delete"
+            android:text="删除地址"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:background="@color/btn_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>

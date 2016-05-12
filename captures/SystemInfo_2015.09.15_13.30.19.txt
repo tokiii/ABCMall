@@ -1,0 +1,29 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        5356bf18 com.cbn.cbnmall/.activites.TestActivity filter 5357bacc
+ 
+Packages:
+  Package [com.cbn.cbnmall] (53365c10):
+    userId=10052 gids=[3003]
+    sharedUser=null
+    pkg=Package{534ba5dc com.cbn.cbnmall}
+    codePath=/data/app/com.cbn.cbnmall-2.apk
+    resourcePath=/data/app/com.cbn.cbnmall-2.apk
+    nativeLibraryPath=/data/app-lib/com.cbn.cbnmall-2
+    versionCode=1
+    applicationInfo=ApplicationInfo{534ba628 com.cbn.cbnmall}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    versionName=1.0
+    dataDir=/data/data/com.cbn.cbnmall
+    targetSdk=23
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2015-09-15 05:05:33
+    firstInstallTime=2015-09-11 05:45:16
+    lastUpdateTime=2015-09-15 05:05:33
+    signatures=PackageSignatures{53361580 [5338a128]}
+    permissionsFixed=true haveGids=true installStatus=1
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    User 0:  installed=true stopped=false notLaunched=false enabled=0
+    grantedPermissions:
+      android.permission.INTERNET

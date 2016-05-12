@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/ll_refund_detail"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/btn_bg"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <include layout="@layout/layout_head" />
+
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:text="状态"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"/>
+
+        <!--退货关闭状态-->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_refund_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <!--等待审核状态-->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_refunding"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+
+        </LinearLayout>
+
+
+        <!--审核完成状态-->
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:id="@+id/rl_refund_agree"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_return_title"
+                android:gravity="center"
+                android:text="退货地址"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/tv_return_title"
+                android:id="@+id/tv_name"
+                android:text="联系人"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/tv_name"
+                android:id="@+id/tv_address"
+                android:text="联系地址"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/tv_address"
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="联系电话"/>
+
+
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_wait_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_select_logistic"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:text="请选择快递："/>
+
+                <Spinner
+                    android:layout_toRightOf="@id/tv_select_logistic"
+                    android:id="@+id/sp_logistic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></Spinner>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_input"
+                    android:text="请填写单号："
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_toRightOf="@id/tv_input"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/et_number"
+                    android:paddingLeft="3dp"
+                    android:background="@drawable/product_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+
+            <Button
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:text="发送快递"
+                android:layout_gravity="end"
+                android:paddingLeft="5dp"
+                android:id="@+id/btn_change_number"
+                android:paddingRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_change_refund_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <Button
+                android:id="@+id/btn_change"
+                android:text="修改申请"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:id="@+id/btn_cancel"
+                android:text="取消退货"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_talk"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_message_title"
+                android:layout_width="match_parent"
+                android:text="留言板"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content" />
+
+
+            <EditText
+                android:layout_below="@id/tv_message_title"
+                android:id="@+id/et_message"
+                android:layout_width="match_parent"
+                android:gravity="top"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="3dp"
+                android:background="@drawable/product_bg"
+                android:layout_height="40dp" />
+
+            <Button
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/et_message"
+                android:text="上传凭证"
+                android:id="@+id/btn_upload"
+                android:textColor="@color/white"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:background="@drawable/button_shape"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+
+            <ImageView
+                android:layout_below="@id/et_message"
+                android:id="@+id/iv_evidence"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/btn_upload"
+                android:layout_width="40dp"
+                android:layout_height="35dp" />
+
+
+            <Button
+                android:text="发表留言"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/et_message"
+                android:id="@+id/btn_commit"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_shape"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+        </RelativeLayout>
+
+        <ListView
+            android:layout_marginTop="5dp"
+            android:id="@+id/lv_talk"
+            android:divider="#00000000"
+            android:dividerHeight="18dp"
+            android:listSelector="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

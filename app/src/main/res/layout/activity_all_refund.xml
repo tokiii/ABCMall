@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btn_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <RelativeLayout
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/rl_head"
+            android:background="@color/btn_bg">
+
+            <ImageView
+                android:id="@+id/left"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/left_white"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/title"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:text="标题"/>
+
+                <ImageView
+                    android:id="@+id/iv_title"
+                    android:src="@mipmap/down"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/title"/>
+
+            </RelativeLayout>
+
+
+
+
+            <ImageView
+                android:id="@+id/right"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lv_all_refund"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

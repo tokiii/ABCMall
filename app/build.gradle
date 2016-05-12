@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+
+    defaultConfig {
+        applicationId "com.cbn.abcmall"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+    }
+
+    // 渠道打包
+    productFlavors {
+        yingyongbao {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
+        }
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
+
+        _360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "_360"]
+        }
+
+        flyme {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "flyme"]
+        }
+    }
+
+
+    //这个是解决lint报错的代码
+    lintOptions {
+        abortOnError false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.android.support:support-v4:23.0.0'
+    compile 'com.android.support:recyclerview-v7:23.0.0'
+    //    compile 'com.android.support:design:23.0.0'
+    apply plugin: 'com.android.application'
+    compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
+    /*添加Facebook Fresco图片加载框架*/
+    //    compile 'com.facebook.fresco:fresco:0.6.0+'
+    /*添加手势返回功能*/
+    /*    apply plugin: 'com.android.databinding'*/
+    compile files('libs/httpcore-4.0.jar')
+    //    compile 'com.inkapplications.viewpageindicator:library:2.4.3'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile files('libs/Xg_sdk_v2.39_20150915_1121.jar')
+
+    /*布局自动适配*/
+    compile 'com.zhy:autolayout:1.4.3'
+}
+//apply plugin: 'announce'

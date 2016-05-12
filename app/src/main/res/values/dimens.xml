@@ -1,0 +1,33 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- list star -->
+    <dimen name="app_title">35sp</dimen>
+    <!-- list end -->
+
+    <dimen name="app_btn_text_size">20sp</dimen>
+
+    <dimen name="txt_size">18sp</dimen>
+    <!-- 默认 -->
+    <dimen name="txt_fs">16sp</dimen>
+    <!-- end -->
+
+
+    <!-- 默认 -->
+    <dimen name="menu_txt">12sp</dimen>
+    <!-- end -->
+
+
+    <!-- listview的间隔线高度 -->
+    <dimen name="list_divider">0.8dp</dimen>
+
+    <!-- listview 标题栏高度 -->
+    <dimen name="list_header_hight">42dp</dimen>
+
+    <!-- TabBarView的左右间距 -->
+    <dimen name="tabbar_padding">5dp</dimen>
+    <!-- tabbar的提示高宽 -->
+    <dimen name="tabbar_num_wh">27dp</dimen>
+</resources>

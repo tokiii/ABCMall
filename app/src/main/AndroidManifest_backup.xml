@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cbn.abcmall">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <!-- 必选 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!--【必选】用以设置前台是否显示通知-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 可选 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />;
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="562f28a367e58eb8e4002bae" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="86578f0c354168d1467a519ef9f0b5c5"></meta-data>
+
+        <activity
+            android:name=".activites.WelcomeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activites.RegisterActivity" />
+        <activity android:name=".activites.LoginActivity" />
+        <activity android:name=".activites.ProductDetailActivity" />
+        <activity
+            android:name=".activites.PropertyActivity"
+            android:theme="@style/MyDialogStyleFromBottom" />
+        <activity
+            android:name=".activites.CartConfirmActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activites.ChargeActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".activites.RefundActivity" />
+        <activity android:name=".activites.AddressActivity" />
+        <activity android:name=".activites.AllRefundActivity" />
+        <activity android:name=".activites.AllOrdersActivity" />
+        <activity android:name=".activites.SettingActivity" />
+        <activity android:name=".activites.AddressEditActivity" />
+        <activity android:name=".activites.AddressAddActivity" />
+        <activity android:name=".activites.LogisticActivity" />
+        <activity android:name=".activites.ShopActivity" />
+        <activity
+            android:name=".activites.RefundDetailActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".activites.CollectActivity" />
+        <activity android:name=".activites.SearchActivity" />
+        <activity
+            android:name=".activites.MainActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activites.PayActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".activites.PropertyDetailActivity" />
+        <activity android:name=".activites.OrderDetailActivity" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService"></service>
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+
+
+    </application>
+
+</manifest>

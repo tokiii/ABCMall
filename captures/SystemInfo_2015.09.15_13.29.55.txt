@@ -1,0 +1,29 @@
+TASK com.cbn.cbnmall id=52
+  ACTIVITY com.cbn.cbnmall/.activites.TestActivity 5334a588 pid=11198
+    Local Activity 53343084 State:
+      mResumed=false mStopped=true mFinished=false
+      mLoadersStarted=false
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 310mcc260mnc en_US ldltr sw480dp w480dp h727dp 160dpi lrg port finger qwerty/v/v dpad/v s.7}
+    FragmentManager misc state:
+      mActivity=com.cbn.cbnmall.activites.TestActivity@53343084
+      mContainer=android.app.Activity$1@53343150
+      mCurState=3 mStateSaved=true mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{53343874 I.E..... R....... 0,0-480,752}
+        android.widget.LinearLayout{53343ff0 V.E..... ........ 0,0-480,752}
+          android.view.ViewStub{53344c1c G.E..... ......I. 0,0-0,0 #1020354}
+          android.widget.FrameLayout{53344df8 V.E..... ........ 0,25-480,752 #1020002 android:id/content}
+            android.widget.LinearLayout{53345198 V.E..... ........ 0,0-480,727}
+              com.cbn.cbnmall.View.FlowLayout{53345554 V.E..... ........ 0,0-480,87 #7f0c0060 app:id/fl_color}
+                android.widget.CheckBox{53346e88 VFED..C. ........ 0,0-76,41}
+                android.widget.CheckBox{5334a380 VFED..C. ........ 81,0-157,41}
+                android.widget.CheckBox{5334a9e0 VFED..C. ........ 162,0-238,41}
+                android.widget.CheckBox{5334b040 VFED..C. ........ 243,0-319,41}
+                android.widget.CheckBox{5334b6a0 VFED..C. ........ 324,0-400,41}
+                android.widget.CheckBox{5334bd00 VFED..C. ........ 0,46-76,87}
+              com.cbn.cbnmall.View.FlowLayout{53346a44 V.E..... ........ 0,187-480,228 #7f0c0061 app:id/fl_size}
+                android.widget.CheckBox{5334c360 VFED.... ........ 0,0-76,41}
+                android.widget.CheckBox{5334ca1c VFED..C. ........ 81,0-157,41}
+                android.widget.CheckBox{5334d07c VFED.... ........ 162,0-238,41}
+                android.widget.CheckBox{5334d6dc VFED.... ........ 243,0-319,41}

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation="vertical" >
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/product_line"/>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:background="@color/product_bg"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/niv_item"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/childText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:maxLines="2"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv_color"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:text="价格"/>
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:text="数量"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/product_line"/>
+
+    <LinearLayout
+        android:id="@+id/ll_tip"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+           <TextView
+               android:layout_marginLeft="10dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="运费(快递)："/>
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:id="@+id/tv_express"
+                android:textColor="@color/red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="运费"/>
+
+        </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_tip"
+        android:layout_below="@id/tv_express"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="15sp"
+        android:layout_alignParentBottom="true"
+        android:text="留言:"/>
+
+    <EditText
+        android:layout_toRightOf="@id/tv_tip"
+        android:layout_below="@id/tv_express"
+        android:id="@+id/et_live"
+        android:gravity="top"
+        android:paddingLeft="3dp"
+        android:background="@drawable/product_bg"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_marginRight="5dp"
+        android:layout_height="50dp"
+        />
+
+</LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

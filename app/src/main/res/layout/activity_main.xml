@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/btn_bg"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="3dp"
+            android:background="@color/ghostwhite"
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/home_h" />
+
+                <TextView
+                    android:id="@+id/tv_home"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首页" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/cart" />
+
+                <TextView
+                    android:id="@+id/tv_cart"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="购物车" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_mine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/mine" />
+
+                <TextView
+                    android:id="@+id/tv_mine"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个人中心" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.cbn.abcmall.views.MyViewPager
+            android:id="@+id/myViewpager"
+            android:fitsSystemWindows="true"
+            android:clipToPadding="true"
+            android:background="@color/btn_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/linearLayout"></com.cbn.abcmall.views.MyViewPager>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

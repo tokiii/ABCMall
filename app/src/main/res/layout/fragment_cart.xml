@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/product_bg"
+    tools:context=".MainActivity" >
+
+    <include layout="@layout/layout_head" />
+
+    <LinearLayout
+        android:id="@+id/ll_hasdata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textIsSelectable="false"
+                android:text="发送到"/>
+
+            <GridView android:id="@+id/gridView"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:verticalSpacing="10dip"
+                android:horizontalSpacing="5dip"
+                android:gravity="fill"
+                android:numColumns="4" >
+            </GridView>
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:groupIndicator="@null" >
+        </ExpandableListView>
+
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:textColor="@color/black"
+                android:id="@+id/cb_all"
+                android:button="@drawable/checkbox_selector"
+                android:layout_width="100dp"
+                android:focusable="false"
+                android:text="全选"
+                android:layout_height="30dp"
+               />
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="总价："/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/tv_price"
+                        android:text="价格"
+                        android:textColor="@color/red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="(不含邮费)"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/btn_commit"
+                android:text="结算"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/ll_nodata"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    >
+
+
+
+        <Button
+            android:id="@+id/btn_go"
+            android:text="去逛逛"
+            android:textColor="@color/white"
+            android:background="@color/btn_bg"
+            android:layout_centerInParent="true"
+            android:layout_width="100dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_marginBottom="30dp"
+            android:layout_above="@id/btn_go"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:text="购物车还没有商品"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+</LinearLayout>

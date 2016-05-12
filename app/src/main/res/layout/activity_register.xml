@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btn_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <include layout="@layout/layout_head" />
+
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:inputType="number"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入手机号"/>
+        <EditText
+            android:id="@+id/et_password"
+            android:inputType="textPassword"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入密码"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_weight="4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="验证码"/>
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="110dp"
+                android:textSize="12sp"
+                android:inputType="number"
+                android:background="@color/btn_bg"
+                android:textColor="@color/white"
+                android:layout_height="35dp"
+                android:text="发送验证码"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/btn_register"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:background="@color/btn_bg"
+            android:layout_height="35dp"
+            android:text="注册并登录"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
