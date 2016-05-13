@@ -27,7 +27,7 @@
 
 
     </style>
-    <style name="MyDialogStyleFromBottom" >
+    <style name="MyDialogStyleFromBottom" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowAnimationStyle">@style/AnimBottom</item>
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsTranslucent">true</item>

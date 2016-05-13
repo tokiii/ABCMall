@@ -219,6 +219,11 @@ public class Config {
      */
     public static final String URL_GET_MYCOUPON = URL_HOST + "get_mycoupons.php";
 
+    /**
+     * 我的返利
+     */
+    public static final String URL_REBATE = URL_HOST + "get_rebateinfo.php";
+
 
 
     /**
