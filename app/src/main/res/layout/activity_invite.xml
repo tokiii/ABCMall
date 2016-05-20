@@ -1,113 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:background="#EEEEEE"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/btn_bg"
     android:layout_height="match_parent">
 
 
-    <include layout="@layout/layout_head"/>
-
-    <RelativeLayout
-        android:layout_marginTop="20px"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:background="@color/white">
-
-        <TextView
-            android:layout_marginLeft="20px"
-            android:id="@+id/tv_wodeyaoqingshouyi"
-            android:layout_centerVertical="true"
-            android:layout_width="wrap_content"
-            android:textSize="26px"
-            android:textColor="#333333"
-            android:layout_height="wrap_content"
-            android:text="我的邀请收益："/>
-
-        <TextView
-            android:layout_toRightOf="@id/tv_wodeyaoqingshouyi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:textSize="26px"
-            android:textColor="@color/btn_bg"
-            android:text="500元"/>
-
-        <Button
-            android:id="@+id/btn_instantinvite"
-            android:layout_marginTop="28px"
-            android:layout_marginRight="20px"
-            android:layout_alignParentRight="true"
-            android:text="立即邀请"
-            android:textSize="22px"
-            android:textColor="@color/white"
-            android:background="@drawable/invite_button_shape"
-            android:layout_width="124px"
-            android:layout_height="44px" />
-
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:layout_marginTop="20px"
-        android:layout_width="match_parent"
-        android:layout_height="62px"
-        android:background="@color/white"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="50px"
-            android:text="邀请的好友"
-            android:textColor="@color/btn_bg"
-            android:textSize="26px" />
+        <include layout="@layout/layout_head"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="295px"
-            android:text="收益"
-            android:textColor="@color/btn_bg"
-            android:textSize="26px" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="470px"
-            android:text="状态"
-            android:textColor="@color/btn_bg"
-            android:textSize="26px" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="636px"
-            android:text="操作"
-            android:textColor="@color/btn_bg"
-            android:textSize="26px" />
-
-
-        <View
+        <RelativeLayout
+            android:layout_marginTop="20px"
             android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:layout_alignParentBottom="true"
-            android:background="#e3e3e3" />
+            android:layout_height="100px"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_marginLeft="20px"
+                android:id="@+id/tv_wodeyaoqingshouyi"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:textSize="26px"
+                android:textColor="#333333"
+                android:layout_height="wrap_content"
+                android:text="我的邀请收益："/>
+
+            <TextView
+                android:layout_toRightOf="@id/tv_wodeyaoqingshouyi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="26px"
+                android:textColor="@color/btn_bg"
+                android:text="400元"/>
+
+            <Button
+                android:id="@+id/btn_instantinvite"
+                android:layout_marginTop="28px"
+                android:layout_marginRight="20px"
+                android:layout_alignParentRight="true"
+                android:text="立即邀请"
+                android:textSize="22px"
+                android:textColor="@color/white"
+                android:background="@drawable/invite_button_shape"
+                android:layout_width="124px"
+                android:layout_height="44px" />
+
+        </RelativeLayout>
 
 
-    </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="20px"
+            android:layout_width="match_parent"
+            android:layout_height="62px"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50px"
+                android:text="邀请的好友"
+                android:textColor="@color/btn_bg"
+                android:textSize="26px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="295px"
+                android:text="收益"
+                android:textColor="@color/btn_bg"
+                android:textSize="26px" />
 
 
-    <ListView
-        android:id="@+id/lv_friends"
-        android:divider="#ffffff"
-        android:dividerHeight="0px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="470px"
+                android:text="状态"
+                android:textColor="@color/btn_bg"
+                android:textSize="26px" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="636px"
+                android:text="操作"
+                android:textColor="@color/btn_bg"
+                android:textSize="26px" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="#e3e3e3" />
+
+
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/lv_friends"
+            android:divider="#ffffff"
+            android:dividerHeight="0px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+
+    </LinearLayout>
+
 
 </LinearLayout>

@@ -3,6 +3,8 @@ package com.cbn.abcmall.activites;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.cbn.abcmall.R;
 import com.cbn.abcmall.adapter.MyPagerAdapter;
@@ -25,6 +27,8 @@ public class TicketActivity extends BaseActivity {
     private List<Fragment> lists;
     private ViewPager myViewPager;
     private TicketIndicator indicator;
+    private TextView title;
+    private ImageView left;
 
     private final String[] CONTENT_TITLE = new String[]{"我的礼券", "过期礼券", "使用记录"};
     private List<String> datas;
@@ -32,7 +36,10 @@ public class TicketActivity extends BaseActivity {
     @Override
     public void initWidget() {
         setContentView(R.layout.activity_ticket);
-
+        title = (TextView) findViewById(R.id.title);
+        title.setText("我的礼券");
+        left = (ImageView) findViewById(R.id.left);
+        left.setOnClickListener(this);
         myViewPager = (ViewPager) findViewById(R.id.viewPager);
         indicator = (TicketIndicator) findViewById(R.id.pagerIndicator);
         datas = new ArrayList<>();
@@ -71,6 +78,12 @@ public class TicketActivity extends BaseActivity {
 
     @Override
     public void widgetClick(View v) {
+
+        switch (v.getId()) {
+            case R.id.left:
+                finish();
+                break;
+        }
 
     }
 }

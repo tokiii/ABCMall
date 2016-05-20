@@ -3,6 +3,8 @@ package com.cbn.abcmall.activites;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.cbn.abcmall.R;
 import com.cbn.abcmall.utils.HttpUtils;
@@ -16,14 +18,29 @@ import org.json.JSONObject;
  * Created by lost on 2016/5/8.
  */
 public class RebateActivity extends BaseActivity {
+
+    private ImageView left;
+    private TextView title;
+
     @Override
     public void initWidget() {
         setContentView(R.layout.activity_rebate);
+        left = (ImageView) findViewById(R.id.left);
+        left.setOnClickListener(this);
+        title = (TextView) findViewById(R.id.title);
+        title.setText("返利信息");
         getMyRebate();
     }
 
     @Override
     public void widgetClick(View v) {
+
+        switch (v.getId()) {
+            case R.id.left:
+
+                finish();
+                break;
+        }
 
     }
 

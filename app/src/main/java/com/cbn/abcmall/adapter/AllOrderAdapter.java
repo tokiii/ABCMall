@@ -472,11 +472,6 @@ public class AllOrderAdapter extends BaseExpandableListAdapter {
      */
     private void setOrderStatus(Button b, String r, final String arg1, final String arg2, final int group, final int child) {
 
-
-
-
-
-
         if (r.equals("4") || r.equals("5")) {
             b.setBackgroundColor(Color.GRAY);
             if (r.equals("4")) {

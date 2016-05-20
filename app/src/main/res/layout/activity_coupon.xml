@@ -3,60 +3,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@color/white"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/btn_bg"
     android:layout_height="match_parent">
 
-    <include layout="@layout/layout_head"/>
-
-
-    <com.cbn.abcmall.views.CouponIndicator
-        android:id="@+id/pagerIndicator"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:background="@color/white"
-        android:layout_height="45dp"
-        android:orientation="horizontal"
-        app:item_count="3">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:gravity="center"
-            android:layout_height="fill_parent"
-            android:textColor="#5f646e"
-            android:text="我的优惠券"/>
+        <include layout="@layout/layout_head"/>
 
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:textColor="#5f646e"
-            android:gravity="center"
-            android:layout_height="fill_parent"
-            android:text="添加优惠券"/>
+        <com.cbn.abcmall.views.CouponIndicator
+            android:id="@+id/pagerIndicator"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            app:item_count="3">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:gravity="center"
-            android:textColor="#5f646e"
-            android:layout_height="fill_parent"
-            android:text="使用记录"/>
-
-
-    </com.cbn.abcmall.views.CouponIndicator>
-
-    <View
-        android:layout_width="match_parent"
-        android:background="#e3e3e3"
-        android:layout_height="1px"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_height="fill_parent"
+                android:textColor="#5f646e"
+                android:text="我的优惠券"/>
 
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:textColor="#5f646e"
+                android:gravity="center"
+                android:layout_height="fill_parent"
+                android:text="添加优惠券"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="#5f646e"
+                android:layout_height="fill_parent"
+                android:text="使用记录"/>
+
+
+        </com.cbn.abcmall.views.CouponIndicator>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#e3e3e3"
+            android:layout_height="1px"/>
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
 
 </LinearLayout>

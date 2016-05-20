@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:background="@color/white"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_marginTop="20px"
@@ -10,17 +10,17 @@
         android:layout_width="700px"
         android:layout_gravity="center"
         android:layout_height="192px"
-        android:background="@mipmap/wushi">
-    <TextView
-        android:id="@+id/tv_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="48px"
-        android:layout_marginTop="20px"
-        android:layout_marginLeft="100px"
-        android:textStyle="bold"
-        android:text="¥10元"/>
+        android:background="@mipmap/wushi_use">
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="48px"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="100px"
+            android:textStyle="bold"
+            android:text="¥10元"/>
 
         <TextView
             android:layout_below="@id/tv_price"
@@ -30,7 +30,7 @@
             android:text="优惠券"
             android:textSize="24px"
             android:textColor="@color/white"/>
-        
+
 
         <TextView
             android:id="@+id/tv_number"
@@ -41,22 +41,8 @@
             android:layout_height="wrap_content"
             android:text="编号：32423423423423"
             android:textSize="20px"/>
-
-
-        <Button
-            android:id="@+id/btn_use"
-            android:layout_marginTop="20px"
-            android:layout_width="100px"
-            android:layout_height="40px"
-            android:textSize="22px"
-            android:layout_marginRight="20px"
-            android:background="@drawable/button_shape"
-            android:layout_alignParentRight="true"
-            android:textColor="@color/white"
-            android:text="立即使用"/>
-
         <TextView
-            android:layout_marginTop="80px"
+            android:layout_marginTop="100px"
             android:id="@+id/tv_condition"
             android:layout_alignParentRight="true"
             android:layout_width="wrap_content"

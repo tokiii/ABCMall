@@ -3,17 +3,14 @@ package com.cbn.abcmall.fragment;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.cbn.abcmall.R;
 import com.cbn.abcmall.activites.Config;
 import com.cbn.abcmall.utils.HttpUtils;
 import com.cbn.abcmall.utils.LogUtils;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -23,9 +20,8 @@ import org.json.JSONObject;
  */
 public class TicketUsedFragment extends Fragment {
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_ticketused, null);
         getUsedTicket();

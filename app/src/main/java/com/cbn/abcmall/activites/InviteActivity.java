@@ -5,7 +5,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.cbn.abcmall.R;
 import com.cbn.abcmall.adapter.InviteAdapter;
@@ -30,6 +32,8 @@ public class InviteActivity extends BaseActivity {
     private Button btn_instantinvite;
 
     private ListView lv_friends;
+    private ImageView left;
+    private TextView title;
 
     @Override
     public void initWidget() {
@@ -37,6 +41,11 @@ public class InviteActivity extends BaseActivity {
         btn_instantinvite = (Button) findViewById(R.id.btn_instantinvite);
         btn_instantinvite.setOnClickListener(this);
         lv_friends = (ListView) findViewById(R.id.lv_friends);
+
+        left = (ImageView) findViewById(R.id.left);
+        left.setOnClickListener(this);
+        title = (TextView) findViewById(R.id.title);
+        title.setText("我的邀请");
         getFriendList();
 
     }
@@ -46,11 +55,12 @@ public class InviteActivity extends BaseActivity {
 
         switch (v.getId()) {
             case R.id.btn_instantinvite:
-
                 Intent intent = new Intent(InviteActivity.this, InviteQrcodeActivity.class);
-
                 startActivity(intent);
+                break;
 
+            case R.id.left:
+                finish();
                 break;
         }
 

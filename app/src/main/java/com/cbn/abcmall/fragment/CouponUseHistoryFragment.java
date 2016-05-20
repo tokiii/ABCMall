@@ -12,11 +12,18 @@ import android.widget.ListView;
 
 import com.cbn.abcmall.R;
 import com.cbn.abcmall.activites.Config;
+import com.cbn.abcmall.adapter.CouponUsedAdapter;
+import com.cbn.abcmall.bean.Coupon;
 import com.cbn.abcmall.utils.HttpUtils;
+import com.cbn.abcmall.utils.JsonUtils;
 import com.cbn.abcmall.utils.LogUtils;
+import com.google.gson.reflect.TypeToken;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.List;
 
 /**
  * 优惠券使用记录
@@ -52,6 +59,26 @@ public class CouponUseHistoryFragment extends Fragment {
                 switch (msg.what) {
                     case 1:
                         LogUtils.i("得到的优惠券数据为------->" + msg.obj);
+
+                        String json = (String) msg.obj;
+                        try {
+                            JSONObject jsonObject = new JSONObject(json);
+                            JSONObject coupon_list = jsonObject.getJSONObject("coupon_list");
+                            JSONArray array = coupon_list.getJSONArray("list");
+
+                            List<Coupon> coupons = JsonUtils.jsonToList(array.toString(), new TypeToken<List<Coupon>>(){});
+
+                            if (coupons.size() != 0) {
+                                CouponUsedAdapter adapter = new CouponUsedAdapter(getActivity(), coupons);
+                                lv_history.setAdapter(adapter);
+                            }
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+
                         break;
                 }
             }

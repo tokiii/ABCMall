@@ -3,6 +3,8 @@ package com.cbn.abcmall.activites;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
@@ -23,6 +25,8 @@ import org.json.JSONObject;
 public class InviteQrcodeActivity extends BaseActivity {
 
     private NetworkImageView niv_qrcode;
+    private ImageView left;
+    private TextView title;
 
 
 
@@ -30,12 +34,22 @@ public class InviteQrcodeActivity extends BaseActivity {
     public void initWidget() {
         setContentView(R.layout.activity_inviteqrcode);
         niv_qrcode = (NetworkImageView) findViewById(R.id.niv_qrcode);
+        left = (ImageView) findViewById(R.id.left);
+        title = (TextView) findViewById(R.id.title);
+        left.setOnClickListener(this);
+        title.setText("邀请二维码");
         getQrcode();
 
     }
 
     @Override
     public void widgetClick(View v) {
+
+        switch (v.getId()) {
+            case R.id.left:
+                finish();
+                break;
+        }
 
     }
 

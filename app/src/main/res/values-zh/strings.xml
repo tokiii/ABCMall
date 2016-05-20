@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="UMUpdateCheck"></string>
+    <string name="UMUpdateCheck">2.6.0.1.20150312</string>
 </resources>
